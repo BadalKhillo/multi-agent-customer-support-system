@@ -202,3 +202,13 @@ This system shows how AI agents can:
 	•	decide when a human should take over
 
 It demonstrates real business value and reflects how modern enterprises are adopting multi-agent AI to improve customer experience and operational efficiency.
+
+
+📎 Submission & Credits
+
+This project is created for the Google AI Agents Competition.
+It demonstrates practical multi-agent design using Google AI Studio and Gemini models.
+
+Created by: Virendra Khillo
+GitHub Repository: (this repo)
+Kaggle Notebook: (link will be added after export) 
