@@ -62,3 +62,79 @@ A Supervisor Agent orchestrates four specialized sub-age
                                  │ - Final status                      │
                                  └────────────────────────────────────┘
 ```
+
+
+
+
+1. Intake & Classification Agent
+	•	Reads the raw customer message
+	•	Extracts key details
+	•	Classifies issue type, sentiment, urgency, keywords
+	•	Outputs a clean JSON summary
+
+2. Reply Drafting Agent
+	•	Takes the JSON summary
+	•	Writes a high-quality, ready-to-send email reply
+	•	Maintains professional tone and policy-aligned responses
+
+3. CRM Summary Agent
+	•	Converts the email + JSON into CRM-friendly notes
+	•	Adds tags, priority, and next-action items
+	•	Prepares Salesforce-style short summaries
+
+4. Escalation Agent
+	•	Analyzes sentiment + risk
+	•	Decides if the case needs human involvement
+	•	Marks cases as “auto-resolved” or “requires escalation”
+
+5. Supervisor Agent
+	•	Orchestrates all other agents
+	•	Validates outputs
+	•	Ensures quality, consistency, and final decision-making
+	•	Returns the complete pipeline output as a single JSON object
+
+
+{
+  "intake_output": {
+    "customer_id": "cust_789123",
+    "category": "Order Issue",
+    "sub_category": "Damaged Product",
+    "sentiment": "Negative",
+    "urgency": "High",
+    "summary": "Customer reports their order arrived broken and is requesting a refund."
+  },
+  "draft_reply_output": {
+    "subject": "Regarding Your Recent Order - We're Here to Help",
+    "body": "Dear Customer,\n\nThank you for reaching out to us. We are so sorry to hear that your order arrived in a damaged condition. That is certainly not the experience we want for our customers, and we understand your frustration.\n\nWe want to make this right for you immediately. Please be assured that we are processing a full refund for your order. You should see the amount reflected in your original payment method within 3-5 business days.\n\nThere is no need to return the damaged item.\n\nWe sincerely apologize for this inconvenience and appreciate your patience. If there is anything else we can assist you with, please do not hesitate to ask.\n\nSincerely,\nThe Support Team"
+  },
+  "crm_output": {
+    "ticket_id": "tkt_556_8901",
+    "status": "Open",
+    "summary_for_crm": "Customer reported a broken item and requested a refund. High urgency and negative sentiment. Drafted a reply confirming the refund.",
+    "tags": ["damaged_item", "refund_request", "negative_feedback"]
+  },
+  "escalation_output": {
+    "should_escalate": true,
+    "reason": "Strong negative sentiment and direct refund request for a failed product. Human review recommended."
+  },
+  "final_decision": "Escalate to human agent",
+  "final_status": "Pending human review"
+}
+
+
+
+🧰 Technologies Used
+
+AI Models
+	•	Gemini 2.5 Pro (reasoning + structured JSON tasks)
+	•	Gemini Flash (fast reasoning + orchestration)
+
+Agent Framework
+	•	Google ADK (Agent Development Kit)
+	•	Multi-agent orchestration (sequential + parallel)
+	•	Supervisor–subagent pipeline
+
+Tools
+	•	Google AI Studio (prompting, agent design, testing)
+	•	JSON Structured Outputs
+	•	System Instructions & Context Management
