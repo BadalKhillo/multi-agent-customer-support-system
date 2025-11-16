@@ -169,3 +169,36 @@ Use the *Supervisor Agent*:
   - escalation_output  
   - final_decision  
   - final_status
+ 
+
+📄 Project Description
+
+This project is an enterprise-grade Multi-Agent Customer Support & Email Automation System.
+It replicates a real company’s customer-support workflow using five coordinated AI agents:
+	•	Intake & Classification
+	•	Email Reply Drafting
+	•	CRM Summary Generation
+	•	Escalation Decisioning
+	•	Supervisor / Orchestrator
+
+The system takes a raw customer message and generates:
+	•	a structured JSON analysis
+	•	a high-quality email reply
+	•	CRM-ready notes
+	•	an escalation assessment
+	•	a final unified output for reporting or automation
+
+This project demonstrates how multi-agent AI can automate complex support workflows with reliability, structure, and enterprise-level clarity.
+
+
+⭐ Why This Project Matters
+
+Companies receive thousands of support requests every day.
+This system shows how AI agents can:
+	•	reduce response time
+	•	automate repetitive email writing
+	•	generate structured CRM notes automatically
+	•	detect high-risk or unhappy customers
+	•	decide when a human should take over
+
+It demonstrates real business value and reflects how modern enterprises are adopting multi-agent AI to improve customer experience and operational efficiency.
