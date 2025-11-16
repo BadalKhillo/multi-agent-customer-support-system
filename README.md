@@ -1,3 +1,4 @@
+
 # 🤖 Multi-Agent Customer Support & Email Automation System
 
 A complete enterprise-grade AI system built using Google AI Studio.  
@@ -10,8 +11,6 @@ This project is part of the Google AI Agents competition and showcases:
 - CRM-ready summaries  
 - Escalation decision-making  
 - Supervisor agent coordination
-
-
 
 
 ## 🧠 System Architecture (Enterprise Multi-Agent Design)
@@ -138,3 +137,35 @@ Tools
 	•	Google AI Studio (prompting, agent design, testing)
 	•	JSON Structured Outputs
 	•	System Instructions & Context Management
+
+
+	## ⚙️ Setup & How to Run
+
+This project does not use traditional code.  
+All agents are built and tested directly inside *Google AI Studio*.
+
+### 1️⃣ Open Google AI Studio  
+https://aistudio.google.com/
+
+### 2️⃣ Create 5 prompt tabs  
+One for each agent:
+- Intake & Classification Agent  
+- Reply Drafting Agent  
+- CRM Summary Agent  
+- Escalation Agent  
+- Supervisor / Orchestrator Agent  
+
+### 3️⃣ Paste the system instructions  
+For each tab, paste the correct system prompt (the ones you already used in Playground).
+
+### 4️⃣ Test the pipeline  
+Use the *Supervisor Agent*:
+- Paste a customer message (example: “My order arrived broken, I want a refund”)  
+- The Supervisor coordinates all other agents  
+- You get the final combined JSON with:
+  - intake_output  
+  - draft_reply_output  
+  - crm_output  
+  - escalation_output  
+  - final_decision  
+  - final_status
